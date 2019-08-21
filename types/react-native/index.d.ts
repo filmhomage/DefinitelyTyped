@@ -7020,6 +7020,14 @@ interface AlertOptions {
  */
 export interface AlertStatic {
     alert: (title: string, message?: string, buttons?: AlertButton[], options?: AlertOptions) => void;
+    prompt: (
+      title: string,
+      message?: string,
+      callbackOrButtons?: ((value: string) => void) | Array<AlertIOSButton>,
+      type?: AlertType,
+      defaultValue?: string,
+      keyboardType?: KeyboardType
+    ) => void;
 }
 
 /**
